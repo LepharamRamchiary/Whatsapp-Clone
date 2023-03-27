@@ -12,7 +12,7 @@ function Sidebar() {
   return (
     <div className='sidebar'>
       <div className='sidebar__header'>
-        <Avatar src='https://avatars2.githubusercontent.com/u/24712956?s=400&u=b71527e605ae1b748fc2d4157a842e57e427ad44&V=4' />
+        <Avatar src='./img/MyPhoto.jpeg' />
         <div className='sidebar__headerRight'>
           <IconButton>
             <PeopleIcon/>
