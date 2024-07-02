@@ -4,11 +4,12 @@ import mongoose from 'mongoose';
 import Messages from './dbmessages.js';
 import Pusher from 'pusher';
 import cors from 'cors';
+import 'dotenv/config'
 
 
 //app config
 const app = express()
-const port = process.env.PORT || 9000 
+const port = 9000 
 
 const pusher = new Pusher({
     appId: "1573877",
@@ -23,7 +24,7 @@ app.use(express.json());
 app.use(cors())
 
 //DB config
-const connection_url = 'mongodb+srv://lepha_22:Lepha_123@whatsapp-api.fgdgu9u.mongodb.net/?retryWrites=true&w=majority'
+const connection_url = process.env.MONGODB_URL;
 
 mongoose.connect(connection_url, {
     useCreateIndex: true,
